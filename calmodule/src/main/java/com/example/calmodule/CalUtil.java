@@ -5,4 +5,9 @@ package com.example.calmodule;
  */
 
 public class CalUtil {
+    static {
+        System.loadLibrary("calM-lib");
+    }
+
+    public static native int[] result(int n);
 }

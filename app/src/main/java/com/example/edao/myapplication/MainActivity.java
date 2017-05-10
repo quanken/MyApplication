@@ -2,15 +2,15 @@ package com.example.edao.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.format.Formatter;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.edao.myapplication.ndktest.NDKLibUtil;
-import com.example.edao.myapplication.ndktest.NDKUtil;
+import com.example.calmodule.CalUtil;
+
+import java.util.Formatter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,20 +35,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     int n = Integer.valueOf(value);
-                    NDKLibUtil ndk_lib_util = new NDKLibUtil();
-                    String str = ndk_lib_util.result(n);
+                    int[] result = CalUtil.result(n);
+                    //String str = String.format("%d元钱能喝%d瓶酒，剩余%d元钱，剩余%d个空瓶，剩余%d个瓶盖", n , result[0], result[1], result[2], result[3]);
+                    Formatter formatter = new Formatter();
+                    String str2 = formatter.format("%d元钱能喝%d瓶酒，剩余%d元钱，剩余%d个空瓶，剩余%d个瓶盖", n , result[0], result[1], result[2], result[3]).toString();
 
-//                    NDKUtil ndk_util = new NDKUtil();
-//                    String str = ndk_util.result(n);
-
-                    mTextView.setText(str);
+                    mTextView.setText(str2);
                 }
 
             }
         });
-
-
-
-        //mTextView.setText(ndk_util.getLibName());
     }
 }

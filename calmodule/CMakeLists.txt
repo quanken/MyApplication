@@ -17,6 +17,6 @@ add_library( # Specifies the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/api.cpp )
+             src/main/cpp/api.c)
 
 include_directories(src/main/include/)

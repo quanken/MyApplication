@@ -3,6 +3,5 @@
 #include <jni.h>
 #include <string.h>
 #include <stdio.h>
-jstring getLibName(JNIEnv* env, jobject obj);
-jstring result(JNIEnv *env, jobject obj, jint n);
+JNIEXPORT jintArray JNICALL Java_com_example_calmodule_CalUtil_result(JNIEnv *env, jobject obj, jint n);
 #endif //NDKDEMO_API_H
