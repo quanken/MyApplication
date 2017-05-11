@@ -1,1 +1,2 @@
-include ':app', ':calmodule', ':dynamic_calmodule'
+include ':beer-calc-app'
+include ':beer-calc'
