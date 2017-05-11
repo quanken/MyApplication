@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.calmodule.CalUtil;
+import com.example.bc.lib.BeerCalculator;
 
 import java.util.Formatter;
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     int n = Integer.valueOf(value);
-                    int[] result = CalUtil.result(n);
+                    int[] result = BeerCalculator.calc(n);
                     //String str = String.format("%d元钱能喝%d瓶酒，剩余%d元钱，剩余%d个空瓶，剩余%d个瓶盖", n , result[0], result[1], result[2], result[3]);
                     Formatter formatter = new Formatter();
                     String str2 = formatter.format("%d元钱能喝%d瓶酒，剩余%d元钱，剩余%d个空瓶，剩余%d个瓶盖", n , result[0], result[1], result[2], result[3]).toString();
