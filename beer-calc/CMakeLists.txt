@@ -11,7 +11,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # automatically packages shared libraries with your APK.
 
 add_library( # Specifies the name of the library.
-             calM-lib
+             beer_calc
 
              # Sets the library as a shared library.
              SHARED
@@ -19,4 +19,4 @@ add_library( # Specifies the name of the library.
              # Provides a relative path to your source file(s).
              src/main/cpp/api.c)
 
-include_directories(src/main/include/)
+include_directories(src/main/cpp/include)

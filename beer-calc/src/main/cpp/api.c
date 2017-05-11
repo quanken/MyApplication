@@ -1,7 +1,7 @@
 #include "api.h"
 //JNIEXPORT 返回类型 JNICALL Java_{packageName_className}_{functionName}(jni参数列表);
 
-JNIEXPORT jintArray JNICALL Java_com_example_calmodule_CalUtil_result(JNIEnv *env, jobject obj, jint n){
+JNIEXPORT jintArray JNICALL Java_com_example_bc_lib_BeerCalculator_calc(JNIEnv *env, jobject obj, jint n){
 
         int drinkBealNum = 0;//喝酒的数量
         int lMoney = 0;//剩余钱数量
